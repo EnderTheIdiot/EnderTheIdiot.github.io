@@ -1,0 +1,12 @@
+EDITORS NOTE
+
+I added this little file just to kinda talk about some stuff
+
+Ok first off, this took me WAYYYYYYY too long. I think overall, I spent around 23 to 25 hours trying to figure this stuff out.
+The way I completed the project may seem simple, but this actually took a lot more pain and headaches than you would probably expect :\
+I mainly struggled with trying to find a way to use the deck that I made in the DeckClass within the GameClass. You would think all it
+would take was a simple getter method, but every time I tried making one for this, it failed to transfer the list itself over to the GameClass. After hours of heartbreak and head banging, I finally was able to make a solution, which was just making the entire DeckClass into a getter method. As soon as I figured that out, everything became a lot easier. 
+I am guessing most people won't read through this, but for those who did, hi. There are probably like a million diffirent ways I could've done this project, but overall I am pretty happy with the result! I am not sure if I did EVERYTHING that the project required, but this should still count for most of it, and at least I learned a lot from this project. Anyways, sorry for taking up 20 seconds of your time, but thanks a lot for reading through this bit. 
+
+Happy Coding!
+- Henry Smith
