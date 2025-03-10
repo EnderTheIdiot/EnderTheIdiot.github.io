@@ -1,0 +1,12 @@
+EDITORS NOTE 2
+
+This is the note for Version 2.0
+
+This update didn't take nearly as long, taking about 10 hours and 15 mins. The update wasn't as hard to make, but it still spent a lot of time adding around 250ish lines of new
+code to make the program into a game of Blackjack!
+I would like to state that if the program cannot find a certain file, it is due to submmiting the file to Github, and might need to be downloaded to fix the issue! (cause repositories can be weird)
+
+Overall, I feel like making the game was pretty fun, and I hope other can enjoy it as well!
+
+Happy Coding!
+- Henry Smith
