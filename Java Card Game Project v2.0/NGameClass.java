@@ -12,12 +12,12 @@ import java.util.Random;
 
 public class NGameClass {   
 
-public static String suit;
-public static String number;
-public static int value; 
-public static int playerCount;
-public static int FRules;
-public static int roundCount;
+    public static String suit;
+    public static String number;
+    public static int value; 
+    public static int playerCount;
+    public static int FRules;
+    public static int roundCount;
 
 // 1: The starting point of the code 
     public static void main(String[] args) {
