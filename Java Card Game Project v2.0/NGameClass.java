@@ -429,14 +429,14 @@ public class NGameClass {
                             System.out.println("Incorrect Input! Please enter a 1 or a 2!");
                         }
                     }
+                } else {
+                    randomizer = randomC.nextInt(2);
+                    player5Com = randomizer;
+                }
             } else {
-                randomizer = randomC.nextInt(2);
-                player5Com = randomizer;
+                System.out.println("-------------------------------"); 
+                System.out.println(" PLAYER 5's TURN ");
             }
-        } else {
-            System.out.println("-------------------------------"); 
-            System.out.println(" PLAYER 5's TURN ");
-        }
 
     // - Player 5's action
             System.out.println("-------------------------------"); 
@@ -456,7 +456,7 @@ public class NGameClass {
                 System.out.println(" ");
             }
             System.out.println("-------------------------------");
-    }
+        }
 
 
 // 9: Prints out the results
