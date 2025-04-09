@@ -1,0 +1,24 @@
+Editor Name: Henry Smith
+
+CHANGE LOG FOR FILE: error.java
+1. [Added] Comments (Marked with "H: Text")
+2. [Added] Main Method
+3. [Changed] Loop Positions (Placed "if()" loop into second "for()" loop)
+4. [Changed] Spacing
+5. [Changed] 2 System Print Commands ("System.out.print" to "System.out.println")
+6. [Fixed] Capitalization ("system.out" to "System.out", "For" to "for", and "Int" to "int")
+7. [Fixed] Incorrect Symbols
+8. [Fixed] Spelling Mistake
+9. [Fixed] Formatting
+
+
+CHANGE LOG FOR FILE: HelloWorld.java
+1. [Added] Comments (Marked with "H: Text") 
+2. [Changed] Spacing
+3. [Fixed] Incorrect Symbols (2 missing ";")
+
+CHANGE LOG FOR FILE: HelloWorldBad.java
+1. [Added] Comments (Marked with "H: Text") 
+2. [Added] missing "=" symbol
+3. [Changed] Spacing
+4. [Fixed] Formatting
