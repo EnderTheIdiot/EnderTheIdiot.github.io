@@ -1,0 +1,51 @@
+Project Name: Platformer2
+Made By: Vincent Adams
+Edited By: Henry Smith
+
+
+// Change Log - Henry Smith //
+
+1. [CHANGED] Made the "Victory!" message only play once per activation
+
+
+// Code Review //
+
+This program made by Vincent Adams is amazing! I only found two small bugs throughout the whole code, with one being a small issues with
+the system printing "Victory!" a bunch of times when entering the finish point, and an issue with the backround music not playing, which
+I believe is just an issue the format of the music file. It was very hard to find any major issues in this program, and it was very 
+interesting to see how the program functions, and how they were able to make a working game in Java. Overall, I think that creator of
+this program has done a fantastic job, and I am very impressed with the final result. 
+
+
+// Solutions //
+
+- Possible Solutions for "Victory!" Message Spam ([Player.java], Line 41)
+
+1. (The solution that I added to my own copy of this program)
+
+    if (new Rectangle(x, y, width, height).intersects(goal)) {
+        victoryChecker += 1;
+        if (victoryChecker == 1){
+            System.out.println("Victory!");
+        } 
+    } else {
+        victoryChecker -= victoryChecker;
+    }
+
+
+2. (Makes the program lag a bit)
+
+    if (new Rectangle(x, y, width, height).intersects(goal)) {
+        victoryChecker += 1;
+        if (victoryChecker == 1){
+            System.out.println("Victory!");
+        } 
+    }
+
+
+- Possible Solutions (Music File Issue)
+
+It looks like the file is still in the program's folder, but it doesn't seem to have
+any data. This might have either been an error with the audio file conversion process,
+or possibly and issue that occured when uploading it to the GitHub repository. I am not
+sure how to fix the problem though, because the .wav file seems to be empty upon downloading
