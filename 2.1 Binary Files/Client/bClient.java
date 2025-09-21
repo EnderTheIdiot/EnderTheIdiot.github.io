@@ -59,3 +59,7 @@ public class bClient {
         }
     }
 }
+
+// Note: Also, there was an issue with the ports, where having two different ports would 
+// cause the program to disconnect, and I couldn't seem to find a way around using the same one.
+// Not sure why this happened, but it seems setting the server and the client to the same port worked just fine
