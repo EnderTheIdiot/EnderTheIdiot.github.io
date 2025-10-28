@@ -1,0 +1,4 @@
+USER DATA LOGS
+Information from this program is stored with each person's username, address, and gender.
+ex. "User Name: Jeff / User Address Somerandomstreetname / Gender: Male"
+----------------------------------------------------------------------------------------
