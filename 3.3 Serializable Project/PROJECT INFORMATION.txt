@@ -1,0 +1,49 @@
+-= Project Information =-
+This document gives a quick explination of the files of this project, how it works, and how to use it.
+
+
+[INTERFACES]
+For this project there are 3 main interfaces:
+
+1. Data Entry Interfaces
+Allows student information to be recorded in the same file. The infomation can be viewed and changed using this interface, but some
+information cannot be changed with it, such as the "withdrawn" status and EDUID. 
+
+2. End User Interface
+Can view the students, but can now create or edit them
+
+3. Admin Interface
+Can view and change all student data. When you set a student's "withdrawn" status to "true", the information of that student will not be viewable 
+by the other two interfaces
+
+All information recorded by these interfaces are saved in the "students.info" file
+
+
+[STUDENT CLASS]
+The Student Class requires the following information:
+
+- Required
+Student Name
+Student EDUID (Randomly generated and set upon student entry. Can only be modified by the Admin Interface)
+Student ID
+Student Grade
+Student Date of Birth
+Parent Name(s)
+Parent Email
+Parent Phone Number
+
+- Required, but can only be viewed by the Admin Interface
+Student Account Creation Date
+Student Graduated Status
+Student Withdrawn Status (Can only be edited by the Admin Interface)
+
+- Extras
+Student Gender
+Student Favorite Color
+Student Hobbies
+
+
+[OTHER]
+The "AppendingObjectOutputStream" class is used to fix an issue that occurs when adding more students to the "student.info" file, where
+the information becomes corrupted due to a "stream header" being incorrectly positioned. I fixed this issue later, but I didn't want to rewrite
+a bunch of code, so I kept it as it is for the time being.
