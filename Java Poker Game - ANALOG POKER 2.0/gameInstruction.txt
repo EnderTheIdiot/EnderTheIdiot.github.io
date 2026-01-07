@@ -1,0 +1,39 @@
+// GAME INSTRUCTIONS FOR: ANALOG POKER //
+
+|GOAL|
+In this game, your goal is to get the highest score possible by playing various poker hands, with each poker hand used providing
+a mulitplier for your score. Your have a total of 3 hands that you can play during a run. ( basically a dump-down version of the 
+rougelite poker+solitare game, Balatro ). 
+
+|HOW TO PLAY|
+To play, you simply run the program titled "mainGame.java", and enter the required inputs into the terminal when prompted. Also,
+you will want to create a second window the file "gameUI.txt" opened up. This window will provide visuals to show you what cards
+you have in hand, and the total score and hands you have left to play.
+
+|CARD VALUES|
+A = 14
+K = 13
+Q = 12
+J = 11
+X = 10 (TI had to use "X" instead of 10 due to an issue with the game UI generator)
+All Numbered Cards = Same As Displayed Value
+
+|HAND VALUES|
+Flush = x5
+Straight = x6
+Pair = x2
+Two Pair = x3.5
+Full House = x5
+
+|NOTES|
+This score system isn't like normal poker or Balatro, rather, instead of having the highest rank card play for score, the score is
+entirely based on the overal value of the played hand. 
+
+It's possible I may change this program to work more like regular Balatro, but for the moment, this should meet the coding length
+requirements for this assignments. This took me a decent chunk of time to get done, but thankfully this took way less time to put
+together in comparision to the first time I made a poker-playing program. (Also, the code has a small bug where you can just enter
+the same value multiple time, but using that would be cheating, so lets keep that a secret, k? (I'm sure i'll fix it at some point, 
+but I need to get this turned in, so it will have to do for now))
+
+- Henry Smith :D
+
