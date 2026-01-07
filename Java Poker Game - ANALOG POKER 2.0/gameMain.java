@@ -312,15 +312,7 @@ public class gameMain extends JFrame implements ActionListener {
         player4SelectionDisplay.setFont(menloFont);
         playerDisplayWindow4.add(player4SelectionDisplay);
 
-        // Pause Button
-        pause1GameB = new JButton("Pause");
-        pause1GameB.setBounds(25, 530,100,20);
-        pause1GameB.setHorizontalAlignment(SwingConstants.CENTER);
-        pause1GameB.setFont(menloFont);
-        pause1GameB.addActionListener(this);
-        playerDisplayWindow1.add(pause1GameB);
-
-         // Play Hand Button
+        // Play Hand Button for player 1
         playHand1B = new JButton("Play Hand");
         playHand1B.setBounds(375, 530,100,20);
         playHand1B.setHorizontalAlignment(SwingConstants.CENTER);
@@ -328,6 +320,7 @@ public class gameMain extends JFrame implements ActionListener {
         playHand1B.addActionListener(this);
         playerDisplayWindow1.add(playHand1B);
 
+        // Play Hand Button for player 2
         playHand2B = new JButton("Play Hand");
         playHand2B.setBounds(375, 530,100,20);
         playHand2B.setHorizontalAlignment(SwingConstants.CENTER);
@@ -335,6 +328,7 @@ public class gameMain extends JFrame implements ActionListener {
         playHand2B.addActionListener(this);
         playerDisplayWindow2.add(playHand2B);
 
+        // Play Hand Button for player 3
         playHand3B = new JButton("Play Hand");
         playHand3B.setBounds(375, 530,100,20);
         playHand3B.setHorizontalAlignment(SwingConstants.CENTER);
@@ -342,6 +336,7 @@ public class gameMain extends JFrame implements ActionListener {
         playHand3B.addActionListener(this);
         playerDisplayWindow3.add(playHand3B);
 
+        // Play Hand Button for player 4
         playHand4B = new JButton("Play Hand");
         playHand4B.setBounds(375, 530,100,20);
         playHand4B.setHorizontalAlignment(SwingConstants.CENTER);
@@ -349,6 +344,15 @@ public class gameMain extends JFrame implements ActionListener {
         playHand4B.addActionListener(this);
         playerDisplayWindow4.add(playHand4B);
 
+        // Pause button for player 1
+        pause1GameB = new JButton("Pause");
+        pause1GameB.setBounds(25, 530,100,20);
+        pause1GameB.setHorizontalAlignment(SwingConstants.CENTER);
+        pause1GameB.setFont(menloFont);
+        pause1GameB.addActionListener(this);
+        playerDisplayWindow1.add(pause1GameB);
+
+        // Pause button for player 2 
         pause2GameB = new JButton("Pause");
         pause2GameB.setBounds(25, 530,100,20);
         pause2GameB.setHorizontalAlignment(SwingConstants.CENTER);
@@ -356,6 +360,7 @@ public class gameMain extends JFrame implements ActionListener {
         pause2GameB.addActionListener(this);
         playerDisplayWindow2.add(pause2GameB);
 
+        // Pause button for player 3
         pause3GameB = new JButton("Pause");
         pause3GameB.setBounds(25, 530,100,20);
         pause3GameB.setHorizontalAlignment(SwingConstants.CENTER);
@@ -363,13 +368,15 @@ public class gameMain extends JFrame implements ActionListener {
         pause3GameB.addActionListener(this);
         playerDisplayWindow3.add(pause3GameB);
 
+        // Pause button for player 4
         pause4GameB = new JButton("Pause");
         pause4GameB.setBounds(25, 530,100,20);
         pause4GameB.setHorizontalAlignment(SwingConstants.CENTER);
         pause4GameB.setFont(menloFont);
         pause4GameB.addActionListener(this);
         playerDisplayWindow4.add(pause4GameB);
-        
+
+        // Quit game button for player 1
         quit1GameB = new JButton("Quit");
         quit1GameB.setBounds(145, 530,100,20);
         quit1GameB.setHorizontalAlignment(SwingConstants.CENTER);
@@ -377,6 +384,7 @@ public class gameMain extends JFrame implements ActionListener {
         quit1GameB.addActionListener(this);
         playerDisplayWindow1.add(quit1GameB);
 
+        // Quit game button for player 2
         quit2GameB = new JButton("Quit");
         quit2GameB.setBounds(145, 530,100,20);
         quit2GameB.setHorizontalAlignment(SwingConstants.CENTER);
@@ -384,6 +392,7 @@ public class gameMain extends JFrame implements ActionListener {
         quit2GameB.addActionListener(this);
         playerDisplayWindow2.add(quit2GameB);
 
+        // Quit game button for player 3
         quit3GameB = new JButton("Quit");
         quit3GameB.setBounds(145, 530,100,20);
         quit3GameB.setHorizontalAlignment(SwingConstants.CENTER);
@@ -391,6 +400,7 @@ public class gameMain extends JFrame implements ActionListener {
         quit3GameB.addActionListener(this);
         playerDisplayWindow3.add(quit3GameB);
 
+        // Quit game button for player 4
         quit4GameB = new JButton("Quit");
         quit4GameB.setBounds(145, 530,100,20);
         quit4GameB.setHorizontalAlignment(SwingConstants.CENTER);
@@ -398,6 +408,7 @@ public class gameMain extends JFrame implements ActionListener {
         quit4GameB.addActionListener(this);
         playerDisplayWindow4.add(quit4GameB);
 
+        // Button for the confirmation of switching players
         playerSwitchB = new JButton("OK");
         playerSwitchB.setBounds(150, 100,100,20);
         playerSwitchB.setHorizontalAlignment(SwingConstants.CENTER);
@@ -405,13 +416,15 @@ public class gameMain extends JFrame implements ActionListener {
         playerSwitchB.addActionListener(this);
         gameDisplayWindow2.add(playerSwitchB);
 
+        // Button that confirms pause action
         confPauseGameB = new JButton("Yes");
         confPauseGameB.setBounds(25, 100,100,20);
         confPauseGameB.setHorizontalAlignment(SwingConstants.CENTER);
         confPauseGameB.setFont(menloFont);
         confPauseGameB.addActionListener(this);
         gameDisplayWindow4.add(confPauseGameB);
-
+        
+        // Button that confirms quit action
         confQuitGameB = new JButton("Yes");
         confQuitGameB.setBounds(25, 100,100,20);
         confQuitGameB.setHorizontalAlignment(SwingConstants.CENTER);
@@ -419,6 +432,7 @@ public class gameMain extends JFrame implements ActionListener {
         confQuitGameB.addActionListener(this);
         gameDisplayWindow5.add(confQuitGameB);
 
+        // Button that confirms load action
         confLoadB = new JButton("Yes");
         confLoadB.setBounds(25, 100,100,20);
         confLoadB.setHorizontalAlignment(SwingConstants.CENTER);
@@ -426,6 +440,7 @@ public class gameMain extends JFrame implements ActionListener {
         confLoadB.addActionListener(this);
         gameDisplayWindowLoad.add(confLoadB);
 
+        // Button that denies load action
         denyLoadB = new JButton("No");
         denyLoadB.setBounds(155, 100,100,20);
         denyLoadB.setHorizontalAlignment(SwingConstants.CENTER);
@@ -433,6 +448,7 @@ public class gameMain extends JFrame implements ActionListener {
         denyLoadB.addActionListener(this);
         gameDisplayWindowLoad.add(denyLoadB);
 
+        // Button that denies pause action
         denyPauseGameB = new JButton("No");
         denyPauseGameB.setBounds(155, 100,100,20);
         denyPauseGameB.setHorizontalAlignment(SwingConstants.CENTER);
@@ -440,6 +456,7 @@ public class gameMain extends JFrame implements ActionListener {
         denyPauseGameB.addActionListener(this);
         gameDisplayWindow4.add(denyPauseGameB);
 
+        // Button that denies quit action
         denyQuitGameB = new JButton("No");
         denyQuitGameB.setBounds(155, 100,100,20);
         denyQuitGameB.setHorizontalAlignment(SwingConstants.CENTER);
@@ -447,32 +464,31 @@ public class gameMain extends JFrame implements ActionListener {
         denyQuitGameB.addActionListener(this);
         gameDisplayWindow5.add(denyQuitGameB);
 
+        // Pause menu info label
         pauseGameL = new JLabel("Pause the game? (SAVES GAME PROGRESS)");
         pauseGameL.setBounds(0, 20,300,25);
         pauseGameL.setHorizontalAlignment(SwingConstants.CENTER);
         gameDisplayWindow4.add(pauseGameL);
 
+        // Quit menu info label
         quitGameL = new JLabel("Quit the game? (LOSES GAME PROGRESS)");
         quitGameL.setBounds(0, 20,300,25);
         quitGameL.setHorizontalAlignment(SwingConstants.CENTER);
         gameDisplayWindow5.add(quitGameL);
 
+        // Player switch menu info label
         playerSwitchL = new JLabel("Switch to next player and press OK when ready!");
         playerSwitchL.setBounds(0, 20,300,25);
         playerSwitchL.setHorizontalAlignment(SwingConstants.CENTER);
         gameDisplayWindow2.add(playerSwitchL);
 
-        playerSwitchL = new JLabel("Switch to next player and press OK when ready!");
-        playerSwitchL.setBounds(0, 20,300,25);
-        playerSwitchL.setHorizontalAlignment(SwingConstants.CENTER);
-        gameDisplayWindow2.add(playerSwitchL);
-
+        // Loading menu info label
         loadGamePrompt = new JLabel("A game save is available. Load Game?");
         loadGamePrompt.setBounds(0, 20,500,25);
         loadGamePrompt.setHorizontalAlignment(SwingConstants.CENTER);
         gameDisplayWindowLoad.add(loadGamePrompt);
 
-
+        // Checks to see if there is a saved game
         File saveCheck = new File("gameData.txt");
         if (saveCheck.length() >= 1) {
             gameWindowLoad.setContentPane(gameDisplayWindow1);
