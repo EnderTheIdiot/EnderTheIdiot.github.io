@@ -147,7 +147,8 @@ public class gameMain extends JFrame implements ActionListener {
         selectedCards = new ArrayList<>();
 
         Font menloFont = new Font("Menlo", Font.PLAIN,12);
-        
+
+        // Window for loading a saved game
         gameWindowLoad = new JFrame("Game Notification - Load Game");
         gameWindowLoad.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gameWindowLoad.setSize(500, 300);
@@ -156,6 +157,7 @@ public class gameMain extends JFrame implements ActionListener {
         gameDisplayWindowLoad = new JPanel();
         gameDisplayWindowLoad.setLayout(null);
 
+        // Window for starting a new game
         gameWindow1 = new JFrame("Game Instructions");
         gameWindow1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gameWindow1.setSize(500, 500);
@@ -164,6 +166,7 @@ public class gameMain extends JFrame implements ActionListener {
         gameDisplayWindow1 = new JPanel();
         gameDisplayWindow1.setLayout(null);
 
+        // Window for switching between players
         gameWindow2 = new JFrame("Game Notification - Player Switch");
         gameWindow2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gameWindow2.setSize(300, 250);
@@ -172,6 +175,7 @@ public class gameMain extends JFrame implements ActionListener {
         gameDisplayWindow2 = new JPanel();
         gameDisplayWindow2.setLayout(null);
 
+        // Window for the game results screen
         gameWindow3 = new JFrame("Game Notification - Results");
         gameWindow3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gameWindow3.setSize(950, 600);
@@ -179,7 +183,8 @@ public class gameMain extends JFrame implements ActionListener {
         gameWindow3.setResizable(false);
         gameDisplayWindow3 = new JPanel();
         gameDisplayWindow3.setLayout(null);
-
+        
+        // Window for the pause function
         gameWindow4 = new JFrame("Game Notification - Pause");
         gameWindow4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gameWindow4.setSize(300, 250);
@@ -188,6 +193,7 @@ public class gameMain extends JFrame implements ActionListener {
         gameDisplayWindow4 = new JPanel();
         gameDisplayWindow4.setLayout(null);
 
+        // Window for the quit function
         gameWindow5 = new JFrame("Game Notification - Quit");
         gameWindow5.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gameWindow5.setSize(300, 250);
