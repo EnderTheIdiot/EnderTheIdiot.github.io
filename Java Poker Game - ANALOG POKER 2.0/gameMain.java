@@ -501,6 +501,8 @@ public class gameMain extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
+        // Quit game action ( deletes progress )
         if (e.getSource() == quit1GameB) {
             gameDisplayWindow5.setVisible(true);
         }
@@ -513,23 +515,25 @@ public class gameMain extends JFrame implements ActionListener {
         if (e.getSource() == quit4GameB) {
             gameDisplayWindow5.setVisible(true);
         }
-        if (e.getSource() == pause1GameB) {
-            gameDisplayWindow4.setVisible(true);
-        }
-        if (e.getSource() == pause1GameB) {
-            gameDisplayWindow4.setVisible(true);
-        }
-        if (e.getSource() == pause1GameB) {
-            gameDisplayWindow4.setVisible(true);
-        }
-        if (e.getSource() == pause1GameB) {
-            gameDisplayWindow4.setVisible(true);
-        }
         if (e.getSource() == denyQuitGameB) {
             System.exit(0);
         }
         if (e.getSource() == confQuitGameB) {
             gameDisplayWindow5.setVisible(false);
+        }
+
+        // Pause game action ( saves progress )
+        if (e.getSource() == pause1GameB) {
+            gameDisplayWindow4.setVisible(true);
+        }
+        if (e.getSource() == pause1GameB) {
+            gameDisplayWindow4.setVisible(true);
+        }
+        if (e.getSource() == pause1GameB) {
+            gameDisplayWindow4.setVisible(true);
+        }
+        if (e.getSource() == pause1GameB) {
+            gameDisplayWindow4.setVisible(true);
         }
         if (e.getSource() == confPauseGameB) {
             File sDirect = new File("gameData.txt");
@@ -539,6 +543,11 @@ public class gameMain extends JFrame implements ActionListener {
         if (e.getSource() == denyPauseGameB) {
             gameDisplayWindow4.setVisible(false);
         }
+
+        // NOTE: HandsLeft is basically the round amount, but it's separate from the ACTUAL round
+        // amount since I plan on making it into a different functionality
+        
+        // Result screen appearance after all the rounds have ended
         if (p1HandsLeft == 0) {
             playerDisplayWindow1.setVisible(false);
             playerDisplayWindow2.setVisible(false);
@@ -567,6 +576,8 @@ public class gameMain extends JFrame implements ActionListener {
 
             gameWindow5.setVisible(true);
         }
+
+        // Action to load a saved game
         if (e.getSource() == confLoadB) {
             File sDirect = new File("gameData.txt");
             loadGame(sDirect);
@@ -576,6 +587,8 @@ public class gameMain extends JFrame implements ActionListener {
                 e1.printStackTrace();
             }
         }
+
+        // Action to start the game
         if (e.getSource() == confirmSettings) {
             try {
                 gameWindow1.setVisible(false);
@@ -585,6 +598,8 @@ public class gameMain extends JFrame implements ActionListener {
                 e1.printStackTrace();
             }
         }
+
+        // Used for tracking which "select" button is pressed
         if (playerSelectBList != null) {
             if (playerSelectBList.contains((JButton)e.getSource()) == true) {
                 try {
@@ -613,6 +628,8 @@ public class gameMain extends JFrame implements ActionListener {
                 }
             }
         }
+
+        // Used for tracking the current player
         if (e.getSource() == playerSwitchB) {
             if (playerWindow1.isVisible() == true && playerWindow2.isVisible() == false && playerWindow3.isVisible() == false && playerWindow4.isVisible() == false) {
                 playerWindow1.setVisible(false);
@@ -633,6 +650,8 @@ public class gameMain extends JFrame implements ActionListener {
             }
 
         } 
+
+        // Used for tracking which "discard" button is pressed 
         if (playerDiscardBList != null) {
             if (playerDiscardBList.contains((JButton)e.getSource()) == true) {
                 try {
@@ -661,6 +680,8 @@ public class gameMain extends JFrame implements ActionListener {
                 }
             }
         }
+
+        // Action for player 4 playing a hand
         if (e.getSource() == playHand4B) {
             if (selectedCards != null && selectedCards.isEmpty() == false) {
                 if (selectedCards.size() == 5) {
@@ -730,7 +751,7 @@ public class gameMain extends JFrame implements ActionListener {
                 playHand4B.setText("Play Hand");
             }
         }
-        
+        // Action for player 3 playing a hand
         if (e.getSource() == playHand3B) {
             if (selectedCards != null && selectedCards.isEmpty() == false) {
                 if (selectedCards.size() == 5) {
@@ -800,7 +821,7 @@ public class gameMain extends JFrame implements ActionListener {
                 playHand3B.setText("Play Hand");
             }
         }
-        
+        // Action for player 2 playing a hand        
         if (e.getSource() == playHand2B) {
             if (selectedCards != null && selectedCards.isEmpty() == false) {
                 if (selectedCards.size() == 5) {
@@ -870,7 +891,7 @@ public class gameMain extends JFrame implements ActionListener {
                 playHand2B.setText("Play Hand");
             }
         }
-
+        // Action for player 1 playing a hand
         if (e.getSource() == playHand1B) {
             if (selectedCards != null && selectedCards.isEmpty() == false) {
                 if (selectedCards.size() == 5) {
@@ -945,6 +966,7 @@ public class gameMain extends JFrame implements ActionListener {
         }
     }
 
+    // Tracks which cards are selected, and which aren't
     private void cardSelector(int iCommand,int playerNumber) throws IOException {
         if (selectedCards.contains(NewDeck.get(iCommand))) {
             selectedCards.remove(NewDeck.get(iCommand));
@@ -981,6 +1003,7 @@ public class gameMain extends JFrame implements ActionListener {
         
     }
 
+    // Used to remove old cards and draw new ones (NOT FUNCTIONAL... YET)
     private void cardRemover(int iCommand,int playerNumber) throws IOException {
         if (selectedCards.contains(NewDeck.get(iCommand))) {
             selectedCards.remove(NewDeck.get(iCommand));
@@ -1017,6 +1040,11 @@ public class gameMain extends JFrame implements ActionListener {
         
     }
 
+    // (FUN FACT: This next method is called "servercommand" because I had originally intended
+    // for this program to be playable across a network, until I had found out that the network
+    // playability for this assignment was optional.)
+    
+    // Used for preparing the player GUIs 
     private void serverCommand(int iCommand,int playerNumber) throws IOException {
         switch (iCommand) {
             case 0:
@@ -1200,6 +1228,8 @@ public class gameMain extends JFrame implements ActionListener {
             }
     }
 
+
+    // Used to create the deck and player hands... and... other stuff...
     private void gameStart() throws IOException {
         TheDeck = new deckClass();
         Deck = TheDeck.fillTheDeck();
@@ -1229,7 +1259,7 @@ public class gameMain extends JFrame implements ActionListener {
     }
 
     
-
+    // Used to save the game (might be broken? I don't know, I didn't have enough time to test it
     public static boolean saveGame(File sDirect, List<cardClass> gameDeckS, List<cardClass> player1DeckS, List<cardClass> player2DeckS, 
         List<cardClass> player3DeckS, List<cardClass> player4DeckS, int p1HandsLeftS, int p2HandsLeftS, int p3HandsLeftS, int p4HandsLeftS, 
         int p1DiscardsLeftS, int p2DiscardsLeftS, int p3DiscardsLeftS, int p4DiscardsLeftS, int p1CurrentScoreS, int p2CurrentScoreS,
@@ -1319,6 +1349,7 @@ public class gameMain extends JFrame implements ActionListener {
         return operationStatus;
     }
 
+    // Used to load a game (same with the save feature; I have no idea if this is broken or not.)
     public void loadGame(File sDirect)  {
             try (PrintWriter writer = new PrintWriter(sDirect)) {
             } catch (FileNotFoundException a) {
@@ -1512,7 +1543,8 @@ public class gameMain extends JFrame implements ActionListener {
                 System.err.println("Error: " + b.getMessage());
             }
         }
-    
+
+    // Used to boot-up the GUI
     public static void main(String[] args) {
         SwingUtilities.invokeLater(gameMain::new);
     }
