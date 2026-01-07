@@ -202,6 +202,7 @@ public class gameMain extends JFrame implements ActionListener {
         gameDisplayWindow5 = new JPanel();
         gameDisplayWindow5.setLayout(null);
 
+        // Window for player 1
         playerWindow1 = new JFrame("Player 1");
         playerWindow1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         playerWindow1.setSize(950, 600);
@@ -210,6 +211,7 @@ public class gameMain extends JFrame implements ActionListener {
         playerDisplayWindow1 = new JPanel();
         playerDisplayWindow1.setLayout(null);
 
+        // Window for player 2
         playerWindow2 = new JFrame("Player 2");
         playerWindow2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         playerWindow2.setSize(950, 600);
@@ -218,6 +220,7 @@ public class gameMain extends JFrame implements ActionListener {
         playerDisplayWindow2 = new JPanel();
         playerDisplayWindow2.setLayout(null);
 
+        // Window for player 3
         playerWindow3 = new JFrame("Player 3");
         playerWindow3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         playerWindow3.setSize(950, 600);
@@ -226,6 +229,7 @@ public class gameMain extends JFrame implements ActionListener {
         playerDisplayWindow3 = new JPanel();
         playerDisplayWindow3.setLayout(null);
 
+        // Window for player 4
         playerWindow4 = new JFrame("Player 4");
         playerWindow4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         playerWindow4.setSize(950, 600);
@@ -234,69 +238,81 @@ public class gameMain extends JFrame implements ActionListener {
         playerDisplayWindow4 = new JPanel();
         playerDisplayWindow4.setLayout(null);
 
+        // Text label for start screen
         gameInfo1 = new JLabel("-=// ANALOG POKER: Game Instructions //=-");
         gameInfo1.setBounds(0, 20,500,25);
         gameInfo1.setHorizontalAlignment(SwingConstants.CENTER);
         gameDisplayWindow1.add(gameInfo1);
 
+        // Text label for game instructions (as soon as I find a good way of formatting it)
         gameInfo2 = new JLabel(" COMING SOON ");
         gameInfo2.setBounds(0, 70,500,25);
         gameInfo2.setHorizontalAlignment(SwingConstants.CENTER);
         gameDisplayWindow1.add(gameInfo2);
 
+        // Starts the game
         confirmSettings = new JButton("Start Game");
         confirmSettings.setBounds(200, 310,100,25);
         confirmSettings.addActionListener(this);
         gameDisplayWindow1.add(confirmSettings);
-
+        
+        // Displays the amount of hands left for player 1
         player1HandsDisplay = new JLabel("Hands Left: 3");
         player1HandsDisplay.setBounds(25, 500,100,20);
         player1HandsDisplay.setHorizontalAlignment(SwingConstants.CENTER);
         player1HandsDisplay.setFont(menloFont);
         playerDisplayWindow1.add(player1HandsDisplay);
 
+        // Displays the amount of hands left for player 2
         player2HandsDisplay = new JLabel("Hands Left: 3");
         player2HandsDisplay.setBounds(25, 500,100,20);
         player2HandsDisplay.setHorizontalAlignment(SwingConstants.CENTER);
         player2HandsDisplay.setFont(menloFont);
         playerDisplayWindow2.add(player2HandsDisplay);
 
+        // Displays the amount of hands left for player 3
         player3HandsDisplay = new JLabel("Hands Left: 3");
         player3HandsDisplay.setBounds(25, 500,100,20);
         player3HandsDisplay.setHorizontalAlignment(SwingConstants.CENTER);
         player3HandsDisplay.setFont(menloFont);
         playerDisplayWindow3.add(player3HandsDisplay);
 
+        // Displays the amount of hands left for player 4
         player4HandsDisplay = new JLabel("Hands Left: 3");
         player4HandsDisplay.setBounds(25, 500,100,20);
         player4HandsDisplay.setHorizontalAlignment(SwingConstants.CENTER);
         player4HandsDisplay.setFont(menloFont);
         playerDisplayWindow4.add(player4HandsDisplay);
 
+        // Displays the card selection for player 1
         player1SelectionDisplay = new JLabel("{ [   ] }");
         player1SelectionDisplay.setBounds(0, 430,950,20);
         player1SelectionDisplay.setHorizontalAlignment(SwingConstants.CENTER);
         player1SelectionDisplay.setFont(menloFont);
         playerDisplayWindow1.add(player1SelectionDisplay);
 
+        // Displays the card selection for player 2
         player2SelectionDisplay = new JLabel("{ [   ] }");
         player2SelectionDisplay.setBounds(0, 430,950,20);
         player2SelectionDisplay.setHorizontalAlignment(SwingConstants.CENTER);
         player2SelectionDisplay.setFont(menloFont);
         playerDisplayWindow2.add(player2SelectionDisplay);
-
+        
+        // Displays the card selection for player 3
         player3SelectionDisplay = new JLabel("{ [   ] }");
         player3SelectionDisplay.setBounds(0, 430,950,20);
         player3SelectionDisplay.setHorizontalAlignment(SwingConstants.CENTER);
         player3SelectionDisplay.setFont(menloFont);
         playerDisplayWindow3.add(player3SelectionDisplay);
 
+        // Displays the card selection for player 4
         player4SelectionDisplay = new JLabel("{ [   ] }");
         player4SelectionDisplay.setBounds(0, 430,950,20);
         player4SelectionDisplay.setHorizontalAlignment(SwingConstants.CENTER);
         player4SelectionDisplay.setFont(menloFont);
         playerDisplayWindow4.add(player4SelectionDisplay);
 
+        // Pause Button
         pause1GameB = new JButton("Pause");
         pause1GameB.setBounds(25, 530,100,20);
         pause1GameB.setHorizontalAlignment(SwingConstants.CENTER);
@@ -304,6 +320,7 @@ public class gameMain extends JFrame implements ActionListener {
         pause1GameB.addActionListener(this);
         playerDisplayWindow1.add(pause1GameB);
 
+         // Play Hand Button
         playHand1B = new JButton("Play Hand");
         playHand1B.setBounds(375, 530,100,20);
         playHand1B.setHorizontalAlignment(SwingConstants.CENTER);
