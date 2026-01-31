@@ -7,6 +7,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+// Creates a class for recording mouse clicks
 class MouseClickCounter {
     private double clicks = 0.0;
     private Runnable listener;
@@ -25,10 +26,11 @@ class MouseClickCounter {
     }
 }
 
+// Creates a class for the display windows that uses the MouseClickCounter class, and allows the windows to be updated on a click
 class ClickCounter extends JFrame {
     private JLabel counter;
     private MouseClickCounter cc1;
-
+    
     public ClickCounter(String windowName, MouseClickCounter cc1) {
         this.cc1 = cc1;
         setTitle(windowName);
@@ -52,23 +54,27 @@ class ClickCounter extends JFrame {
     }
     private static ClickCounter[] windows = new ClickCounter[2];
 
+    // Updates all counters on window interaction
     private void updateAllCounters() {
         for (ClickCounter window : windows) {
             window.updateCounter();
         }
     }
 
+    // Adds the counters to a list, so they can all be updated at the "same time"
     public static void setCounters(ClickCounter ccw1, ClickCounter ccw2) {
         windows[0] = ccw1;
         windows[1] = ccw2;
     }
 }
 
+
 public class MultithreadProgram {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             MouseClickCounter MouseData = new MouseClickCounter();
 
+            // Creates the displays, and sets them to visible
             ClickCounter window1 = new ClickCounter("Window 1", MouseData);
             ClickCounter window2 = new ClickCounter("Window 2", MouseData);
             ClickCounter.setCounters(window1, window2);
